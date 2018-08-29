@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<script src="js/knockout-3.4.2.js"></script>
+
+<style>
+	form {
+	font-size: 1.1em;
+	}
+	table {
+		margin-left: 20px;
+	}
+	td + td, .sib{
+		padding: 10px;
+		border-left: 1px solid #ddd;
+		border-top: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	input + input {
+		margin-right : 20px;
+	}
+	td {
+		text-align: right;
+	}
+</style>
+</head>
+<body>
+
+<form action="index.php?p=3" method="post" enctype="multipart/form-data">
+	<table>
+    <tr>
+		<td class="sib">בחר קובץ ארכיון:</td>
+		<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+	</tr>
+	<tr>
+		<td class="sib">דגלים:</td>
+		<td>
+			<input type="checkbox" name="keep-sequence" value="keep-sequence" checked>keep-sequence 
+			<input type="checkbox" name="stoplist" value="stoplist-file heb.txt" checked>stoplist
+		</td>
+	</tr>
+	<tr>
+		<td class="sib">מתייג:</td>
+		<td>
+			<input type="checkbox" name="tagger" value="0">tagger
+		</td>
+	</tr>
+	<tr>
+		<td class="sib">מספר נושאים למידול:</td>
+		<td><input type="range" data-bind="value: range" id="range" min="1" max="50" step="1"> <input type="text" data-bind="value: range_num" id="range_num" name="range_num"></td>
+	</tr>
+	<tr>					
+		<td id="sub"><input type="submit" value="העלה!" name="submit"></td>
+	</tr>
+	</table>
+</form>
+
+<script>
+function AppViewModel() {
+	var numberOfTopics = 10;
+    var self = this;
+    this.range = ko.observable(numberOfTopics);
+    this.range_num = ko.observable(numberOfTopics);
+
+	self.range_num = ko.computed(function() {
+        return self.range();
+    });
+}
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
+</script>
+
+</body>
+</html>
