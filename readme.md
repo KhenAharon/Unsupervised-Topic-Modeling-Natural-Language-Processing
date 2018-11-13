@@ -1,7 +1,6 @@
 # Unsupervised Topic Modeling
 
-Given texts or emails, the tool yields you their topics!
-The tool is web based, easy to understand and operate.
+Giving a corpus (e.g. texts or emails), the tool output their topics using an unsupervised learning. The tool is used at Bar Ilan University Data Center. The tool is web based, easy to understand and operate, with intuitive GUI.
 
 ## Prerequisites
 
