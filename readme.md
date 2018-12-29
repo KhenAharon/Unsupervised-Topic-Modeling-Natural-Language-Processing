@@ -15,11 +15,12 @@ https://programminghistorian.org/en/lessons/topic-modeling-and-mallet
 2. Install 32-bit Winrar.
 3. Install XAMPP on your system for a web access.
 4. Restart your PC.
-5. Start the apache server by XAMPP.
-5. Copy the web content to c:\xampp\htdocs.
-6. Compile the C# back-end server, or use the provided executable.
-7. Run server.exe.
-8. Browse to http://localhost on your browser.
+5. Allow port 80 in the firewall (only if you want an external access to your server).
+6. Start the apache server by XAMPP.
+7. Copy the web content to c:\xampp\htdocs.
+8. Compile the C# back-end server, or use the provided executable.
+9. Run server.exe.
+10. Browse to http://localhost on your browser.
 
 ## Using the tool
 
