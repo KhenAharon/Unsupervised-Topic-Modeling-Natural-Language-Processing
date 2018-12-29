@@ -15,8 +15,7 @@ https://programminghistorian.org/en/lessons/topic-modeling-and-mallet
 2. Install 32-bit Winrar.
 3. Install XAMPP on your system for a web access.
 4. Restart your PC.
-5. If your are using a cloud or a remote server,
-
+5. If your are using a cloud or a remote server,<br/>
 then allow port 80 in Windows firewall and in the security group of the cloud.
 6. Start the apache server by XAMPP.
 7. Copy the web content to c:\xampp\htdocs.
